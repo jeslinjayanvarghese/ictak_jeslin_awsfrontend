@@ -1,0 +1,310 @@
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
+<!-- Nucleo Icons -->
+<link rel="stylesheet" href="/assets/material/css/nucleo-icons.css">
+<link href="/assets/material/css/nucleo-svg.css" rel="stylesheet" />
+<!-- Font Awesome Icons -->
+<script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+<!-- Material Icons -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+<!-- CSS Files -->
+
+<!-- <link rel="stylesheet" href="/assets/dope/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/assets/dope/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/assets/dope/css/themify-icons.css">
+  <link rel="stylesheet" href="/assets/dope/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="/assets/dope/css/animate.css">
+  <link rel="stylesheet" href="/assets/dope/css/style.css">
+  <link rel="stylesheet" href="/assets/dope/css/responsive.css"> -->
+
+<link id="pagestyle" href="/assets/material/css/material-kit.css?v=3.0.0" rel="stylesheet" />
+<!-- <div id="loader-wrapper">
+
+  <div id="loader"></div>
+  <div class="loader-section section-left"></div>
+  <div class="loader-section section-right"></div>
+</div> -->
+
+<div class="container position-sticky z-index-sticky top-0"><div class="row"><div class="col-12">
+    <nav class="navbar navbar-expand-lg  blur border-radius-xl top-0 z-index-fixed shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
+      <div class="container-fluid px-0">
+        <img class="navbar-brand font-weight-bolder ms-sm-3" src="https://ictkerala.org/wp-content/uploads/2019/01/cropped-ict-ico.png"
+         alt="ictak logo" height="40px" width="30px">
+        <a class="navbar-brand font-weight-bolder ms-sm-3"  rel="tooltip" title="Team!" data-placement="bottom" target="_blank">
+          
+        </a>
+        <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon mt-2">
+            <span class="navbar-toggler-bar bar1"></span>
+            <span class="navbar-toggler-bar bar2"></span>
+            <span class="navbar-toggler-bar bar3"></span>
+          </span>
+        </button>
+        <div class="collapse navbar-collapse pt-3 pb-2 py-lg-0 w-100" id="navigation">
+          <ul class="navbar-nav navbar-nav-hover ms-auto">
+            <li class="nav-item dropdown dropdown-hover mx-2">
+              <a routerLink="" class="nav-link ps-2 d-flex cursor-pointer align-items-center" id="dropdownMenuPages" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="material-icons opacity-6 me-2 text-md">cottage</i>
+                
+                Home
+                
+              </a>
+              
+            </li>
+            <li class="nav-item dropdown dropdown-hover mx-2">
+              <a routerLink="/LandingPage/about" class="nav-link ps-2 d-flex cursor-pointer align-items-center" id="dropdownMenuPages" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="material-icons opacity-6 me-2 text-md">offline_bolt</i>
+                About Us
+                
+              </a>
+              
+            </li>
+           
+    
+            <li class="nav-item dropdown dropdown-hover mx-2">
+              <a routerLink="/LandingPage/courses" class="nav-link ps-2 d-flex cursor-pointer align-items-center" id="dropdownMenuBlocks" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="material-icons opacity-6 me-2 text-md">class</i>
+                Courses
+                <img src="/assets/material/img/down-arrow-dark.svg" alt="down-arrow" class="arrow ms-auto ms-md-2">
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end dropdown-menu-animation dropdown-md dropdown-md-responsive p-3 border-radius-lg mt-0 mt-lg-3" aria-labelledby="dropdownMenuBlocks" >
+                <div class="d-none d-lg-block">
+     
+      <li class="nav-item dropdown dropdown-hover dropdown-subitem" *ngFor='let i of courses'>
+        <a class="dropdown-item py-2 ps-3 border-radius-md" routerLink="/LandingPage/singlecourses/{{ i._id }}" >
+          <div class="w-100 d-flex align-items-center justify-content-between">
+            <div>
+              <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">{{ i.courseTitle }}</h6>
+              <span class="text-sm">{{ i.courseTitle }}</span>
+            </div> 
+          </div>
+        </a>     
+      </li>
+    </div>
+    
+    
+    <div class="row d-lg-none">
+      <div class="col-md-12">
+        <div class="d-flex mb-2">
+          <div class="icon h-10 me-3 d-flex mt-1">
+            <i class="ni ni-single-copy-04 text-gradient text-primary"></i>
+          </div>
+          <div class="w-100 d-flex align-items-center justify-content-between">
+            <div>
+              <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">FullStack Development</h6>
+            </div>
+          </div>
+        </div>
+        <a class="dropdown-item ps-3 border-radius-md mb-1" href="./sections/page-sections/hero-sections.html">
+          MEAN Stack
+        </a>
+        <a class="dropdown-item ps-3 border-radius-md mb-1" href="./sections/page-sections/features.html">
+          MERN Stack
+        </a>
+    
+        <div class="d-flex mb-2 mt-3">
+          <div class="icon h-10 me-3 d-flex mt-1">
+            <i class="ni ni-laptop text-gradient text-primary"></i>
+          </div>
+          <div class="w-100 d-flex align-items-center justify-content-between">
+            <div>
+              <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0"> Data Science & Analytics</h6>
+            </div>
+          </div>
+        </div>
+        
+    
+    
+        <div class="d-flex mb-2 mt-3">
+          <div class="icon h-10 me-3 d-flex mt-1">
+            <i class="ni ni-badge text-gradient text-primary"></i>
+          </div>
+          <div class="w-100 d-flex align-items-center justify-content-between">
+            <div>
+              <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Cyber Security Analyst</h6>
+            </div>
+          </div>
+        </div>
+       
+        <div class="d-flex mb-2 mt-3">
+          <div class="icon h-10 me-3 d-flex mt-1">
+            <i class="ni ni-badge text-gradient text-primary"></i>
+          </div>
+          <div class="w-100 d-flex align-items-center justify-content-between">
+            <div>
+              <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Robotic Process Automation</h6>
+            </div>
+          </div>
+        </div>
+    
+    
+        <div class="d-flex mb-2 mt-3">
+          <div class="icon h-10 me-3 d-flex mt-1">
+            <i class="ni ni-notification-70 text-gradient text-primary"></i>
+          </div>
+          <div class="w-100 d-flex align-items-center justify-content-between">
+            <div>
+              <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Testing</h6>
+            </div>
+          </div>
+        </div>
+        
+    
+    
+        <div class="d-flex mb-2 mt-3">
+          <div class="icon h-10 me-3 d-flex mt-1">
+            <i class="ni ni-app text-gradient text-primary"></i>
+          </div>
+          <div class="w-100 d-flex align-items-center justify-content-between">
+            <div>
+              <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Digital Marketing</h6>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mb-2 mt-3">
+          <div class="icon h-10 me-3 d-flex mt-1">
+            <i class="ni ni-app text-gradient text-primary"></i>
+          </div>
+          <div class="w-100 d-flex align-items-center justify-content-between">
+            <div>
+              <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Other Courses </h6>
+            </div>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+    
+              </ul>
+            </li>
+            
+    
+            <li class="nav-item dropdown dropdown-hover mx-2">
+              <a class="nav-link ps-2 d-flex cursor-pointer align-items-center" id="dropdownMenuDocs" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="material-icons opacity-6 me-2 text-md">group</i>
+                Memberships
+                <img src="/assets/material/img/down-arrow-dark.svg" alt="down-arrow" class="arrow ms-auto ms-md-2">
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end dropdown-menu-animation dropdown-md dropdown-md-responsive mt-0 mt-lg-3 p-3 border-radius-lg" aria-labelledby="dropdownMenuDocs">
+                <div class="d-none d-lg-block">
+      <ul class="list-group">
+        <li class="nav-item list-group-item border-0 p-0">
+          <a class="dropdown-item py-2 ps-3 border-radius-md" routerLink="/LandingPage/academic">
+            <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Getting Started</h6>
+            <span class="text-sm">Academic membership</span>
+          </a>
+        </li>
+        <li class="nav-item list-group-item border-0 p-0">
+          <a class="dropdown-item py-2 ps-3 border-radius-md" routerLink="/LandingPage/corporate">
+            <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Foundation</h6>
+            <span class="text-sm">Corporate membership</span>
+          </a>
+        </li>
+        
+      </ul>
+    </div>
+    
+    <div class="row d-lg-none">
+      <div class="col-md-12 g-0">
+        <a class="dropdown-item py-2 ps-3 border-radius-md" href="./pages/about-us.html">
+          <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Getting Started</h6>
+          <span class="text-sm">Accademic membership</span>
+        </a>
+    
+        <a class="dropdown-item py-2 ps-3 border-radius-md" href="./pages/about-us.html">
+          <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Foundation</h6>
+          <span class="text-sm">Corporate membership</span>
+        </a>
+    
+        
+      </div>
+    </div>
+    
+              </ul>
+            </li>
+            <li class="nav-item dropdown dropdown-hover mx-2" >
+              <a class="nav-link ps-2 d-flex cursor-pointer align-items-center" id="dropdownMenuDocs" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="material-icons opacity-6 me-2 text-md">flag_circle</i>
+                Events
+                <img src="/assets/material/img/down-arrow-dark.svg" alt="down-arrow" class="arrow ms-auto ms-md-2">
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end dropdown-menu-animation dropdown-md dropdown-md-responsive mt-0 mt-lg-3 p-3 border-radius-lg" aria-labelledby="dropdownMenuDocs">
+                <div class="d-none d-lg-block">
+      <ul class="list-group" >
+        <li class="nav-item list-group-item border-0 p-0" *ngFor='let i of events'>
+          <a class="dropdown-item py-2 ps-3 border-radius-md" routerLink="/LandingPage/event/{{i._id}}">
+            <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">{{ i.eventname }}</h6>
+            <span class="text-sm">{{ i.eventtype }}</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    
+    <div class="row d-lg-none">
+      <div class="col-md-12 g-0">
+        <a class="dropdown-item py-2 ps-3 border-radius-md" href="./pages/about-us.html">
+          <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Getting Started</h6>
+          <span class="text-sm">Digital Workshop</span>
+        </a>
+    
+        <a class="dropdown-item py-2 ps-3 border-radius-md" href="./pages/about-us.html">
+          <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Internship 2021</h6>
+          <span class="text-sm">RPA</span><br>
+          <span class="text-sm">ML-AI</span>
+        </a>
+        <a class="dropdown-item py-2 ps-3 border-radius-md" href="./pages/about-us.html">
+          <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Getting Started</h6>
+          <span class="text-sm">Sales force</span>
+        </a>
+    
+        
+      </div>
+    </div>
+    
+              </ul>
+            </li>
+            <li class="nav-item dropdown dropdown-hover mx-2">
+              <a class="nav-link ps-2 d-flex cursor-pointer align-items-center" href="https://retail.ictkerala.org/" id="dropdownMenuPages" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="material-icons opacity-6 me-2 text-md">dashboard</i>
+                Paatshala
+                
+              </a>
+              
+            </li>
+           
+            <li class="nav-item dropdown dropdown-hover mx-2">
+              <a class="nav-link ps-2 d-flex cursor-pointer align-items-center" href="https://ictkerala.zohorecruit.com/jobs/Careers" id="dropdownMenuPages" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="material-icons opacity-6 me-2 text-md">face</i>
+                Careers
+                
+              </a>
+              
+            </li>
+            <li class="nav-item dropdown dropdown-hover mx-2">
+              <a routerLink="/LandingPage/contactus" class="nav-link ps-2 d-flex cursor-pointer align-items-center" id="dropdownMenuPages" data-bs-toggle="dropdown"
+               aria-expanded="false">
+                <i class="material-icons opacity-6 me-2 text-md">mail</i>
+                Contact Us
+                
+              </a>
+              
+            </li>
+
+
+
+
+
+
+
+            
+            <li class="nav-item my-auto ms-3 ms-lg-0">
+             
+              <a href="https://www.creative-tim.com/product/material-kit-pro" class="btn btn-sm  bg-gradient-primary  mb-0 me-1 mt-2 mt-md-0">
+                <i class="material-icons  me-2 text-md">admin_panel_settings</i>Login</a>
+              
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- End Navbar -->
+    </div></div></div>

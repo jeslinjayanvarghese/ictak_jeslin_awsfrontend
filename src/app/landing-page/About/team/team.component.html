@@ -1,0 +1,82 @@
+<div class="container mt-7">
+  <div class="position-relative border-radius-xl overflow-hidden shadow-lg mb-7">
+    <header>
+      <!-- <h1>OUR TEAM</h1> -->
+      <div class="h1 text-center text-dark" id="pageHeaderTitle">OUR TEAM</div>
+    </header>
+
+    <section>
+     
+  <!----------------------
+     Our profile cards
+  ------------------------>
+  <owl-carousel-o [options]="teamSlider">
+    <ng-container  *ngFor="let team of teams"  >
+    <ng-template carouselSlide  >
+
+    <div class="row">
+    <div class="container mt-5">
+      <div class="card">
+        <img src="{{ team.image }}" alt="Chyno Deluxe">
+        <h1>{{ team.name }}</h1>
+        <h2>{{ team.designation }}</h2>
+        <a class="button" href="https://instagram.com/chynodeluxe" target="_blank"><span>+</span> Follow</a>
+         <!-- some social links to show off -->
+  <ul class="profile-social-links">
+    <li>
+      <a target="_blank" href="https://www.facebook.com/creativedonut">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a target="_blank" href="https://twitter.com/dropyourbass">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a target="_blank" href="https://github.com/vipulsaxena">
+        <i class="fa fa-github"></i>
+      </a>
+    </li>
+    <li>
+      <a target="_blank" href="https://www.behance.net/vipulsaxena">
+       
+        <i class="fa fa-behance"></i>
+      </a>
+    </li>
+  </ul>
+      </div>
+    </div>
+  </div>
+   
+     
+      
+      <!-- /end container -->
+    </ng-template>
+  </ng-container>
+  </owl-carousel-o>
+
+    </section>
+   
+  </div>
+</div>
+
+
+<!-- team -->
+
+<!-- <div class="row"  >
+  <div class="col-sm-6 col-lg-4 col-xl-3"   >
+    <div class="single-person">
+      <div class="person-image">
+        <img src="{{ team.image }}" alt="">
+        <span class="icon">
+          <i class="fab fa-html5"></i>
+        </span>
+      </div>
+      <div class="person-info">
+        <h3 class="full-name">{{ team.name }}</h3>
+        <span class="speciality">{{ team.designation }}</span>
+      </div>
+    </div>
+  </div>
+</div> -->

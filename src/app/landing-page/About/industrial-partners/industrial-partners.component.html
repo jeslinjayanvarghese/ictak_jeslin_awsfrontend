@@ -1,0 +1,13 @@
+<div class="container py-2 mt-5">
+	<div class="position-relative border-radius-xl overflow-hidden shadow-lg mb-7">
+    <div class="h1 text-center text-dark" id="pageHeaderTitle">INDUSTRIAL PARTNERS</div>
+<div class="logo-slider">
+	<div class="logo-slide-track">
+		<div class="slide" *ngFor="let i of industrials">
+			<img src="http://localhost:3000/{{ i.image }}" [style.height.px] ='imageHeight' [style.width.px] ='imageWidth'
+            [style.margin.px] ='imageMargin' alt="" />
+		</div>
+	</div>
+</div>
+</div>
+</div>

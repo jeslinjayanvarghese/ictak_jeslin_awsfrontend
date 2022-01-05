@@ -1,0 +1,109 @@
+<app-header></app-header>
+<!-- -------- START HEADER 10 w/ carousel ------- -->
+<header>
+    <!-- <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel"> -->
+      <!-- <div class="carousel-inner"> -->
+        <!-- <div class="carousel-item active"> -->
+          <div class="page-header min-vh-75" style="background-image: url(&#39;https://media.istockphoto.com/photos/this-merger-will-see-the-potential-growth-of-our-business-picture-id1215758851?b=1&k=20&m=1215758851&s=170667a&w=0&h=sRgM4GbfNsddxfLzsSNC4R1pOc8xVS6E_g3zHjLJBds=&#39;);" loading="lazy">
+            <span class="mask bg-gradient-dark"></span>
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-6 my-auto">
+                  <!-- <h4 class="text-white mb-0 fadeIn1 fadeInBottom">Pricing Plans</h4> -->
+                  <h1 class="text-white fadeIn2 fadeInBottom">Work with Us</h1>
+                  <p class="lead text-white opacity-8 fadeIn3 fadeInBottom">"We are stronger when we listen, and smarter when we share." — Rania Al-Abdullah</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card shadow-lg mt-n5 mx-4 mb-4">
+            <section class="background">
+                <h3 class="text-dark mb-4"> PARTNERSHIP FORM</h3>
+                <div class="container">
+            
+                    <form [formGroup]="validatePartnerForm" (ngSubmit)='newPartner()' #heroForm="ngForm" method="POST">
+                        <!-- First row -->
+                        <div class="row">
+                            <div class="six columns padright">
+                                <input class="u-full-width" type="text" [(ngModel)]="partner.name" name="name" placeholder="Name"
+                                    formControlName="name" value="" />
+            
+                            </div>
+                            <div class="six columns padnew">
+                                <input class="u-full-width " type="text" [(ngModel)]="partner.email" name="email"
+                                    placeholder=" Email" value="" formControlName="email" />
+                            </div>
+                        </div>
+                        <!-- Second row -->
+                        <br>
+                        <div class="row">
+                            <div class="six columns padright">
+                                <input class="u-full-width" type="text" [(ngModel)]="partner.phone" name="phone"
+                                    placeholder=" Contact Number" value="" formControlName="phone" />
+                            </div>
+                            <div class="six columns padnew">
+                                <input class="u-full-width " type="text" [(ngModel)]="partner.firm" name="firm"
+                                    placeholder="Published Date" value="" formControlName="firm" />
+                            </div>
+                        </div>
+                        <!-- third row -->
+                        <br>
+                        <div class="row">
+                            <div class="six columns padright">
+                                <input class="u-full-width" type="text" [(ngModel)]="partner.address" name="address"
+                                    placeholder="Address" value="" formControlName="address" />
+                            </div>
+                            <div class="six columns padnew">
+                                <input class="u-full-width " type="text" [(ngModel)]="partner.district" name="district"
+                                    placeholder="Distict" value="" formControlName="district" />
+                            </div>
+                        </div>
+            
+                        <!-- Fourth row -->
+                        <br>
+                        <div class="row">
+                            <div class="six columns padright">
+                                <input class="u-full-width" type="text" [(ngModel)]="partner.officeSpace" name="officeSpace"
+                                    placeholder=" Office Space in Square Feet" value="" formControlName="officeSpace" />
+                            </div>
+                            <div class="six columns padnew">
+                                <input class="u-full-width " type="text" [(ngModel)]="partner.employeeCount" name="employeeCount"
+                                    placeholder="Number of Employees" value="" formControlName="employeeCount" />
+                            </div>
+                        </div>
+                        <!-- textbox -->
+                        <br>
+                        <input class="u-full-width boxer" type="text"
+                            placeholder="Write a brief report about the outcome/impact you have done so far with respect to the training industry?"
+                            [(ngModel)]="partner.report" name="report" value="" formControlName="report" />
+            
+                        <br><br>
+                        <input class="u-full-width boxer" type="text"
+                            placeholder="What are you expecting in partnering with ICT academy of Kerala?"
+                            [(ngModel)]="partner.expect" name="expect" value="" formControlName="expect" />
+            
+                        <br><br>
+                        <input class="u-full-width boxer" type="text" placeholder="Brief Profile of the promoters"
+                            [(ngModel)]="partner.profile" name="profile" value="" formControlName="profile" />
+            
+            
+        
+                        <!-- submit -->
+                        <br><br>
+                        <div class="partensfor">
+                        <input class="btn btn-info partbut" type="submit" [disabled]="validatePartnerForm.pristine || validatePartnerForm.invalid"
+                            value="Submit">
+                        </div> 
+                    </form>
+                </div>
+            </section>
+                     </div>
+        <!-- </div> -->
+        
+
+        
+  
+  </header>
+  <!-- -------- END HEADER 11 w/ carousel ------- -->
+
+  <app-footer></app-footer>

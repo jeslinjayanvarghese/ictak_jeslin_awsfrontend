@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,600");
+* {
+  box-sizing: border-box;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.container {
+  margin: auto;
+  font-family: "Poppins", Arial, san-serif;
+  line-height: 1.4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f9f9;
+  height: 100%;
+}
+
+.card {
+  background: #fff url("https://storage.googleapis.com/chydlx/codepen/minimalist-profile-card/card-bg.jpg") top -10% center no-repeat;
+  background-size: contain;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px -5px rgba(60, 60, 60, 0.2);
+  text-align: center;
+  padding: 30px 60px;
+}
+.card img {
+  background-color: #dddfe6;
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  margin: auto auto 15px;
+  display: block;
+}
+.card h1 {
+  font-size: 22px;
+  margin: 10px auto 0;
+  letter-spacing: 1px;
+}
+.card h2 {
+  margin: auto;
+  color: #b1b6c6;
+  font-weight: 300;
+  font-size: 14px;
+}
+.card .button {
+  display: block;
+  text-decoration: none;
+  background: #3b70fc;
+  color: #f9f9f9;
+  padding: 12px;
+  border: none;
+  border-radius: 25px;
+  margin-top: 30px;
+  font-size: 16px;
+  font-weight: 700;
+  min-width: 200px;
+  transition: 0.2s;
+}
+.card .button span {
+  font-size: 20px;
+  line-height: 1;
+  vertical-align: top;
+}
+.card .button:hover {
+  background: #1856fb;
+}
