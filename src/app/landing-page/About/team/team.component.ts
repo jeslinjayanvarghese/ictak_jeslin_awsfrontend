@@ -23,7 +23,6 @@ export class TeamComponent implements OnInit {
   ngOnInit(): void {
 
     this.landingService.getTeams().subscribe((data: any)=>{
-      console.log(data);
       this.teams=JSON.parse(JSON.stringify(data));
       }) 
   }
@@ -54,13 +53,20 @@ export class TeamComponent implements OnInit {
         items: 2
       },
       1000: {
-        items: 2
+        items: 3,
+        margin: 20,
+        autoHeight : true,
+
       },
       1400:{
-        items:2
+        items:2,
+        margin: 20,
+        autoHeight : true,
       },
       1600:{
-       items:2
+       items:2,
+       margin: 20,
+       autoHeight : true,
      }
     },
     nav: true

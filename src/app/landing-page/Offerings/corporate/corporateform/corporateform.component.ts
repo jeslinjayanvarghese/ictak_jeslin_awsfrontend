@@ -78,7 +78,7 @@ export class CorporateformComponent implements OnInit {
  
       this.landingService.formSubmit(this.corporate).subscribe((data: any)=>{
       console.log(data);
-      console.log("ts");
+      // console.log("ts");
       }) 
       alert("Registration Successfull");
   }

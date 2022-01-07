@@ -17,7 +17,6 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
     this.landingService.getCourses().subscribe((data: any)=>{
       this.courses=data;
-      console.log(this.courses);
       }) 
 
   //events

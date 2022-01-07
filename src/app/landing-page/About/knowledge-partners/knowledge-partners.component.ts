@@ -22,7 +22,6 @@ export class KnowledgePartnersComponent implements OnInit {
 
   ngOnInit(): void {
     this.landingService.getKnowledge().subscribe((data: any)=>{
-    console.log(data);
     this.knowledge=data;
     }) 
   }

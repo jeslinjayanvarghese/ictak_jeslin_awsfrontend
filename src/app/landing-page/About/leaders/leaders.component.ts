@@ -19,7 +19,6 @@ export class LeadersComponent implements OnInit {
 
   ngOnInit(): void {
     this.landingService.getLeaders().subscribe((data: any)=>{
-      console.log(data);
       this.leaders=data;
       }) 
 

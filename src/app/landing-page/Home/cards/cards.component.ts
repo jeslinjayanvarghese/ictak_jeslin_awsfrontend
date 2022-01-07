@@ -14,18 +14,22 @@ import { LandingService } from 'src/app/landing.service';
 
 
 export class CardsComponent implements OnInit {
-
   courses:any=[];
 
+  
+
+  testimonials:any=[];
 
   constructor(private landingService: LandingService,private router: Router) { }
-  ngOnInit(): void {
 
-    this.landingService.getCourses().subscribe((data: any)=>{
-      console.log(data);
-      this.courses=data;
+  ngOnInit(): void {
+    this.landingService.getTestimonial().subscribe((data: any)=>{
+      this.testimonials=data;
       }) 
 
+      this.landingService.getCourses().subscribe((data: any)=>{
+        this.courses=data;
+        }) 
   }
 
  customOptions: OwlOptions = {
@@ -45,16 +49,24 @@ export class CardsComponent implements OnInit {
        items: 1
      },
      770: {
-       items: 2
+       items: 2,
+       margin: 20,
+        autoHeight : true,
      },
      1000: {
-       items: 3
+       items: 3,
+       margin: 20,
+        autoHeight : true,
      },
      1400:{
-       items:3
+       items:3,
+       margin: 20,
+        autoHeight : true,
      },
      1600:{
-      items:3
+      items:3,
+      margin: 20,
+        autoHeight : true,
     }
    },
    nav: true

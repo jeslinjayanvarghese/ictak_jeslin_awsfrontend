@@ -20,7 +20,6 @@ export class PatronsComponent implements OnInit {
 
   ngOnInit(): void {
     this.landingService.getPatrons().subscribe((data: any)=>{
-      console.log(data);
       this.patrons=data;
       }) 
   }

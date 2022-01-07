@@ -19,7 +19,6 @@ export class EventTestimonialsComponent implements OnInit {
 
   ngOnInit(): void {
      this.landingService.getTestimonial().subscribe((data: any)=>{
-      console.log(data);
       this.eventtestimonial=data;
       }) 
   }
@@ -42,16 +41,16 @@ export class EventTestimonialsComponent implements OnInit {
         items: 1
       },
       770: {
-        items: 3
+        items: 3, margin: 20
       },
       1000: {
-        items: 3
+        items: 3, margin: 20
       },
       1400:{
-        items:3
+        items:3, margin: 20
       },
       1600:{
-       items:4
+       items:4, margin: 20
      }
     },
     nav: true

@@ -7,20 +7,16 @@
   display: none !important;
 }
 
-html,
-body {
-  height: 100%;
-}
 
 .container {
-  margin: auto;
+
   font-family: "Poppins", Arial, san-serif;
   line-height: 1.4;
-  display: flex;
+
   justify-content: center;
   align-items: center;
   background-color: #f9f9f9;
-  height: 100%;
+
 }
 
 .card {

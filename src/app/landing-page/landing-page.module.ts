@@ -10,6 +10,8 @@ import { FooterComponent } from './footer/footer.component';
 //COURSES
 import { SinglePageComponent } from './Courses/single-page/single-page.component';
 import { MainPageComponent } from './Courses/main-page/main-page.component';
+import { TestimonialCourseComponent } from './Courses/testimonial-course/testimonial-course/testimonial-course.component';
+
 
 //OFFERINGS
 import { AcademicComponent } from './Offerings/academic/academic.component';
@@ -52,6 +54,7 @@ import { AcademicformComponent } from './Offerings/academic/academicform/academi
 import { EventComponent } from './events/event/event.component';
 import { EventTestimonialsComponent } from './events/event-testimonials/event-testimonials.component';
 
+
 @NgModule({
   declarations: [
     HeaderComponent,
@@ -79,6 +82,9 @@ import { EventTestimonialsComponent } from './events/event-testimonials/event-te
     MarketingPartnersComponent,
     KnowledgePartnersComponent,
     VendorsComponent,
+
+    //courses
+    TestimonialCourseComponent,
 
     //OFFERINGS
 

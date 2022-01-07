@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { LandingService } from 'src/app/landing.service';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import { Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-single-page',
@@ -12,85 +13,62 @@ export class SinglePageComponent implements OnInit {
 
   course:any=[];
   submitted: boolean = false;
-  testimonial:any=[];
-  CourseReg:any=[];
+  testimonials:any=[];
+
+  
+  CourseReg:any={
+    name: '',
+    email:'', 
+    phoneno:'',
+    courseTitle:'',
+    courseAmount:''
+  };
 
   constructor(private router: Router,private landingService: LandingService,private activatedrouter: ActivatedRoute) { }
 
   ngOnInit(): void {
+
+    //SingleCoure
     this.activatedrouter.paramMap.subscribe((params) =>
     {        
       console.log(params.get("id"));
       this.landingService.getCourseId(params.get("id")).subscribe((data:any)=>{
         this.course=data;
-        console.log(data);
+        // console.log(this.course.courseTitle,"26line");
         localStorage.setItem("coursename", this.course.courseTitle);
       })
     })
 
+
+    //CourseName passed for CourseTestimonials
+    let cname = localStorage.getItem("coursename");
+    // console.log(cname,"coursecname");
+    this.landingService.getCourseTestimonial(cname).subscribe((data)=>{
+    this.testimonials=data;
+  })
+
+
+  //Testimonials
+  this.landingService.getTestimonial().subscribe((data: any)=>{
+    // console.log(data);
+    this.testimonials=data;
+    }) 
+
+  }
+
+
+  //Course Registration
+  newReg(){ 
     
-
-
-  //   let cname = localStorage.getItem("coursename");
-  //   this.landingService.getCourseTestimonial(cname).subscribe((data)=>{
-  //   this.testimonial=data;
-  // })
-
-  }
-
-  newReg(){
-    console.log(this.CourseReg);
-    this.landingService.regSubmit(this.CourseReg).subscribe(
-      response=>{
-        console.log("new reg success");
-
-      },
-      err=>{
-        console.log("failed");
-        alert("Something happened Wrong try again");
-      }
-    )
-      
+    this.landingService.regSubmit(this.CourseReg,this.course.courseTitle).subscribe((data: any)=>{
+      console.log(data +"ts");
+      }) 
+      alert("Registration Successfull");
+      window.location.reload();
   }
 
 
-
-
-
-  dynamicSlides = [
-    {
-      id: 1,
-      src:'https://i.pinimg.com/564x/20/c4/e3/20c4e382faedbb1e917c772dd62c9fd2.jpg',
-      alt:'Mean Stack',
-      title:'Side 1'
-    },
-    {
-      id: 2,
-      src:'',
-      alt:'Mern Stack',
-      title:'Side 2'
-    },
-    {
-      id: 3,
-      src:'https://miro.medium.com/max/1400/1*6l15igU_z2Uj15SzOGx1Iw.png',
-      alt:'Data Science',
-      title:'Side 3'
-    },
-    {
-      id: 4,
-      src:'https://hackr.io/blog/artificial-intelligence-courses/thumbnail/large',
-      alt:'AI',
-      title:'Side 4'
-    },
-    {
-      id: 5,
-      src:'https://5.imimg.com/data5/ME/DN/GLADMIN-56099733/training-on-software-testing-500x500.png',
-      alt:'Software Testing',
-      title:'Side 5'
-    }
-  ]
-
-
+ //owlCarousel
 
  customOptions: OwlOptions = {
    loop: true,

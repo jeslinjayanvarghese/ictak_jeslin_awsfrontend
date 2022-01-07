@@ -9,15 +9,19 @@ import { LandingService } from 'src/app/landing.service';
   styleUrls: ['./testimonials.component.css']
 })
 export class TestimonialsComponent implements OnInit {
+  courses:any=[];
   testimonials:any=[];
 
   constructor(private landingService: LandingService,private router: Router) { }
+
   ngOnInit(): void {
     this.landingService.getTestimonial().subscribe((data: any)=>{
-      console.log(data);
       this.testimonials=data;
       }) 
- 
+
+      this.landingService.getCourses().subscribe((data: any)=>{
+        this.courses=data;
+        }) 
   }
 
  customOptions: OwlOptions = {
@@ -28,7 +32,7 @@ export class TestimonialsComponent implements OnInit {
    
    dots: true,
    navSpeed: 600,
-   navText: [ ' <i class="material-icons  me-2 text-md">face</i>', ' <i class="material-icons opacity-6 me-2 text-md">face</i>' ],
+   navText: [ ' <i class="material-icons  me-2 text-md">arrow_back_ios</i>', ' <i class="material-icons opacity-6 me-2 text-md">arrow_forward_ios</i>' ],
    responsive: {
      0: {
        items: 1 
@@ -37,13 +41,19 @@ export class TestimonialsComponent implements OnInit {
        items: 1
      },
      770: {
-       items: 2
+       items: 3,
+       margin: 20,
+        autoHeight : true,
      },
      1000: {
-       items: 3
+       items: 3,
+       margin: 20,
+        autoHeight : true,
      },
      1400:{
-       items:3
+       items:3,
+       margin: 20,
+        autoHeight : true,
      },
      1600:{
       items:3

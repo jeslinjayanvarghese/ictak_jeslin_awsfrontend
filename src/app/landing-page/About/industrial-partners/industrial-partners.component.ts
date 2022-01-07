@@ -19,7 +19,6 @@ export class IndustrialPartnersComponent implements OnInit {
 
   ngOnInit(): void {
     this.landingService.getIndustrial().subscribe((data: any)=>{
-    console.log(data);
     this.industrials=data;
     }) 
   }

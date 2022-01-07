@@ -6,8 +6,8 @@ import { Injectable } from '@angular/core';
 })
 export class LandingService {
 
-  server_address: string ='http://localhost:3000/api';
-  // server_address: string ='http://localhost:3000';
+  // server_address: string ='/api';
+  server_address: string ='http://localhost:3000';
   
   constructor(private http: HttpClient) { }
 
@@ -58,12 +58,13 @@ export class LandingService {
   //?-------------SinglePageCourse----------------
     getCourseId(id:any){
       console.log("service id course");
-      return this.http.get<any>(`${this.server_address}course/courseSingle/`+id);
+      return this.http.get<any>(`${this.server_address}/course/courseSingle/`+id);
     }
 
-    regSubmit(course: any){
+    regSubmit(course: any,courseTitle: any){
       console.log(course);
-      return this.http.post(`${this.server_address}/registration/courseRegister`,{"reg":course});
+      console.log(courseTitle);
+      return this.http.post(`${this.server_address}/registration/courseRegister`,{"c":course,"ct":courseTitle});
     }
 
   
@@ -89,10 +90,10 @@ export class LandingService {
   }
 
   //!Testimonials
-    // getCourseTestimonial(cname:any){
-    //   console.log('service');
-    //   return this.http.get<any>("http://localhost:3000/hometestimonials",{"c":cname});
-    // }
+    getCourseTestimonial(cname:any){
+      console.log('service');
+      return this.http.post<any>(`${this.server_address}/CourseTestimony/individual`,{"c":cname});
+    }
 
   //!Events
 

@@ -15,7 +15,6 @@ export class AcademiccollaborationsComponent implements OnInit {
   ngOnInit(): void {
     AOS.init();
        this.landingService.getMembers().subscribe((data: any)=>{
-      console.log(data);
       this.members=data;
       }) 
   }

@@ -48,7 +48,7 @@
                   </div>
                 </div>
                 <div class="card-body pb-3">
-                  <form role="form text-start" novalidate #RegForm="ngForm" (ngSubmit)='newReg()'>
+                  <form role="form text-start"  #RegForm="ngForm" (ngSubmit)='newReg()'>
                     <div class="input-group input-group-outline mb-3">
                       <label class="form-label">Name</label>
                       <input type="text" class="form-control" name="name"[(ngModel)]="CourseReg.name" required class="form-control is-valid">
@@ -61,18 +61,16 @@
 
                     <div class="input-group input-group-outline mb-3">
                       <label class="form-label">Number</label>
-                      <input type="number" class="form-control">
+                      <input type="text" class="form-control" name="phoneno" [(ngModel)]="CourseReg.phoneno" required>
                     </div>
+
                     <label class="form-label">Course Name</label>
                     <div class="input-group input-group-outline mb-3"> 
-                   
-                      <select class="form-control" name="courseTitle" [(ngModel)]="CourseReg.courseTitle" required>
-                        <option value="">--Select---</option>
-                        <option value="MEAN FSD">MEAN FSD</option>
-                        <option value="MERN FSD">MERN FSD</option>
-                        <option value="DIGITAL MARKETING">DIGITAL MARKETING</option>
-                        <option value="DATA SCIENCE AND ANALYTICS">DATA SCIENCE AND ANALYTICS</option>
-                      </select>
+                      <input type="text" class="form-control" name="courseTitle"   [(ngModel)]="course.courseTitle" required disabled>
+<!--                    
+                      <select class="form-control" name="courseTitle" [(ngModel)]="CourseReg.courseTitle"  required>
+                        <option value="{{ course.courseTitle }}">{{ course.courseTitle }}</option>
+                      </select> -->
                     </div>
 
 
@@ -761,7 +759,7 @@
                             <div
                               class="card bg-cover text-center"
                               style="
-                                background-image: url(&#39;../../assets/img/curved-images/curved1.jpg&#39;);
+                                background-image: url(&#39;../../assets/material/img/curved-images/curved8.jpg&#39;);
                               "
                             >
                               <div class="card-body z-index-2 py-9">
@@ -769,9 +767,9 @@
                                 <p class="text-white">
                                   General Aptitude Test 
                                 </p>
-                                <label class="badge badge-light text-dark"
+                                <label class="badge badge-light text-white"
                                   >60 Questions</label>
-                                  <label class="badge badge-light text-dark"
+                                  <label class="badge badge-light text-white"
                                   >The Duration of the Test will be 60 mins.</label>
 
                                 
@@ -1218,7 +1216,7 @@
                             <div
                               class="card bg-cover text-center"
                               style="
-                                background-image: url(&#39;../../assets/img/curved-images/curved2.jpg&#39;);
+                                background-image: url(&#39;../../assets/material/img/curved-images/curved5.jpg&#39;);
                               "
                             >
                               <div class="card-body z-index-2 py-9">
@@ -1228,7 +1226,7 @@
                                 <p class="text-white">
                                   Please check your eligibility before registering with us.
                                 </p>
-                                <label class="badge badge-light text-dark"
+                                <label class="badge badge-light text-white"
                                   >HAPPY LEARNING!</label
                                 >
                               </div>
@@ -1505,9 +1503,9 @@
           </div>
           <owl-carousel-o [options]="customOptions">
 
-            <ng-container *ngFor="let slide of dynamicSlides">
+            <ng-container *ngFor="let i of testimonials">
               <ng-template carouselSlide>
-          <div class="col-lg-12 mb-lg-0 mb-4">
+          <div class="col-lg-12 mb-lg-0 col-md-12 col-sm-12 mb-4">
             <div class="card">
               <div
                 class="card-header p-0 mx-3 mt-n4 position-relative z-index-1"
@@ -1527,7 +1525,7 @@
                     text-gradient text-primary text-uppercase text-xs
                     font-weight-bold
                   "
-                  >House</span
+                  >MEAN</span
                 >
                 <a
                   href="javascript:;"
@@ -1536,18 +1534,17 @@
                   Shared Coworking
                 </a>
                 <p class="card-description mb-4">
-                  Use border utilities to quickly style the border and
-                  border-radius of an element. Great for images, buttons.
+                 {{i.testimony}}
                 </p>
-                <div class="author align-items-center">
+                <div class="col-lg-6 author align-items-center">
                   <img
                     src="/assets/material/img/team-1.jpg"
                     alt="..."
                     class="avatar shadow"
                     loading="lazy"
                   />
-                  <div class="name ps-2">
-                    <span>Mathew Glock</span>
+                  <div class="col-lg-12 name ps-2">
+                    <span>{{i.name}}</span>
                     <div class="stats">
                       <small>Posted on 28 February</small>
                     </div>

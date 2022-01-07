@@ -14,10 +14,14 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'admin',
-    component: AdminComponent
+    path:'adminpage',
+    loadChildren:() => import('./admin-dashboard/admin-dashboard.module').then(m => m.AdminDashboardModule)
   },
-
+  {
+    path:'adminpage',
+    redirectTo:'adminpage',
+    pathMatch:'full'
+  }
 ];
 
 @NgModule({
